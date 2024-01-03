@@ -14,7 +14,7 @@ let info = {
     linkedin: "http://www.linkedin.com/in/mohamad-al-mdfaa",
     github: "https://github.com/mhd-medfa",
     resume:
-      "https://github.com/hrishikeshpaul/portfolio-template/blob/master/src/assets/pdfs/Resume.pdf"
+      "https://github.com/mhd-medfa/mhd-medfa.github.io/tree/master/assets/pdfs/Mohamad Al Mdfaa - resume.pdf"
   },
   education: [
     {
