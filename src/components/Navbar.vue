@@ -36,7 +36,7 @@
               <a
                 class="nav-link"
                 href="/about"
-                @click.prevent="$emit('scroll', 'about')"
+                @click.prevent="$emit('scroll', 'about');closeNavbar()"
                 :class="{ 'text-light': nightMode }"
                 >about</a
               >
@@ -45,7 +45,7 @@
               <a
                 class="nav-link"
                 href="/skills"
-                @click.prevent="$emit('scroll', 'skills')"
+                @click.prevent="$emit('scroll', 'skills');closeNavbar()"
                 :class="{ 'text-light': nightMode }"
                 >skills</a
               >
@@ -54,7 +54,7 @@
               <a
                 class="nav-link"
                 href="/portfolio"
-                @click.prevent="$emit('scroll', 'portfolio')"
+                @click.prevent="$emit('scroll', 'portfolio');closeNavbar()"
                 :class="{ 'text-light': nightMode }"
                 >portfolio</a
               >
@@ -63,7 +63,7 @@
               <a
                 class="nav-link"
                 href="/contact"
-                @click.prevent="$emit('scroll', 'contact')"
+                @click.prevent="$emit('scroll', 'contact');closeNavbar()"
                 :class="{ 'text-light': nightMode }"
                 >contact</a
               >
@@ -72,7 +72,7 @@
               <a
                 class="nav-link"
                 href="#"
-                @click.prevent="switchMode"
+                @click.prevent="switchMode();closeNavbar()"
                 :class="{ 'text-light': nightMode }"
                 ><i
                   :class="{
@@ -115,6 +115,10 @@ export default {
       this.localNightMode = !this.localNightMode;
       this.$emit("nightMode", this.localNightMode);
     },
+    closeNavbar() {
+      // Close the navbar by toggling the collapse state
+      $('.navbar-collapse').collapse('hide');
+    }
   },
 };
 </script>
